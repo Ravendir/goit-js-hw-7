@@ -15,14 +15,14 @@ const img = galleryItems.map((image) => {
     </div>`;
 });
 
-// let instance = null;
+let instance = null;
 
 gallery.addEventListener("click", (event) => {
   event.preventDefault();
   if (event.target.tagName !== "IMG") {
     return;
   }
-  const instance = basicLightbox.create(
+  instance = basicLightbox.create(
     `
     <img src="${event.target.dataset.source}"  width="800" height="600">
     `
