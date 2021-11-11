@@ -10,4 +10,8 @@ const img = galleryItems.map((image) => {
 });
 gallery.insertAdjacentHTML("beforeend", img.join(""));
 
-const lightbox = new SimpleLightbox(".gallery a", { captionsData: "alt" });
+new SimpleLightbox(".gallery a", {
+  captionsType: "attr",
+  captionsData: "alt",
+  captionDelay: "250",
+});
